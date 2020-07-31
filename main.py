@@ -170,6 +170,6 @@ while True:
                 else:
                     turn = 'player'
 
-    print('Do you want to play again? (yes or no)')
+    print('Do you want to play again? (Yes or No)')
     if not input().lower().startswith('y'):
         break
