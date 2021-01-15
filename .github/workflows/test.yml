@@ -22,7 +22,7 @@ jobs:
             # bijou.js ${{ github.event.inputs.version }}
             Commits:
             ```
-            ${{ git log $(git describe --tags --abbrev=0)..HEAD --oneline }}
+            $( git log $(git describe --tags --abbrev=0)..HEAD --oneline )
             ```
 
 
