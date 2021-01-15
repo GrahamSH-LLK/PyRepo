@@ -20,9 +20,9 @@ jobs:
           release_name: Release ${{ github.event.inputs.version }}
           body: |
             # bijou.js ${{ github.event.inputs.version }}
-            Commit:
+            Commits:
             ```
-            ${{ github.ref }}
+            ${{ git log $(git describe --tags --abbrev=0)..HEAD --oneline }}
             ```
 
 
