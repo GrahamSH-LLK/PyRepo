@@ -11,6 +11,7 @@ jobs:
     steps:
       - run: |
           echo "Version: ${{ github.event.inputs.version }}"
+          COMMIT = git log $(git describe --tags --abbrev=0)..HEAD
       - name: Create a Release
         uses: actions/create-release@v1.1.4
         env:
@@ -22,7 +23,7 @@ jobs:
             # bijou.js ${{ github.event.inputs.version }}
             Commits:
             ```
-            $( git log $(git describe --tags --abbrev=0)..HEAD --oneline )
+            ${{ COMMIT }}
             ```
 
 
