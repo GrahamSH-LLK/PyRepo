@@ -5,3 +5,15 @@ on:
         description: 'Version'     
         required: true
         default: 'v'
+        jobs:
+          printInputs:
+            runs-on: ubuntu-latest
+            steps:
+            - run: |
+              echo "Version: ${{ github.event.inputs.version }}"
+            - name: Create a Release
+              uses: actions/create-release@v1.1.4
+              with:
+                tag_name: github.event.inputs.version
+
+
