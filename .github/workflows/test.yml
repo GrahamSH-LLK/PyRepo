@@ -5,7 +5,7 @@ on:
         description: 'Version'     
         required: true
         default: 'v'
-        jobs:
+    jobs:
           printInputs:
             runs-on: ubuntu-latest
             steps:
