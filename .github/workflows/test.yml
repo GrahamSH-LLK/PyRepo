@@ -18,5 +18,11 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.version }}
           release_name: Release ${{ github.event.inputs.version }}
+          body: |
+            # bijou.js ${{ github.event.inputs.version }}
+            Commit:
+            ```
+            ${{ github.ref }}
+            ```
 
 
