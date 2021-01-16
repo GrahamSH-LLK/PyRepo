@@ -23,7 +23,7 @@ jobs:
             # bijou.js ${{ github.event.inputs.version }}
             Commits:
             ```
-            $COMMIT
+            ${{ COMMIT }}
             ```
 
 
